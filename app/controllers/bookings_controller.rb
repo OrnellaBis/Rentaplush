@@ -6,7 +6,7 @@ class BookingsController < ApplicationController
         
     end
     def create
-        @user = User.find(params[:user_id])
+        @user = current_user
         @plush = Plush.find(params[:plush_id])
         @booking = Booking.new(booking_params)
         @booking.user = @user
@@ -16,7 +16,6 @@ class BookingsController < ApplicationController
         else
             render "/plush/#{@plush}"
         end
-        
     end
     def destroy
         @booking = Booking.find(params[:id])
@@ -27,6 +26,6 @@ class BookingsController < ApplicationController
     private
 
     def booking_params
-        params.require(:booking).permit(:start_date, :end_date, :user_id, :plush_id)
+        params.require(:booking).permit(:start_date, :end_date, :plush_id)
     end
 end
