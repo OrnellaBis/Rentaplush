@@ -15,7 +15,7 @@ class BookingsController < ApplicationController
         if @booking.save
           redirect_to bookings_path
         else
-          render "/plush/#{@plush}"
+          redirect_to plush_path(@plush)
         end
     end
 
