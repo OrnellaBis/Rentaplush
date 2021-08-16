@@ -1,0 +1,2 @@
+class PlushesController < ApplicationController
+end
