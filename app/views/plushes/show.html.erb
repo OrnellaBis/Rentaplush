@@ -15,23 +15,28 @@
 
         </div>
         
-        <% if user_signed_in? %>
             
-            <div id="form-card">
-                <p class="text-center mt-2"><%= @plush.price_per_day %> <i class="fas fa-euro-sign"></i> par jour </p>
-                <div class="m-3">
-                    <%= simple_form_for [@plush, @booking] do |t| %>
-                    <%= t.input :start_date %>
-                    <%= t.input :end_date %>
-                    <%= t.submit class:"btn btn-primary offset-md-3" %>
-                    <% end %>
-                </div>
+        <div id="form-card">
+            <% if !user_signed_in? %>
+                <%= link_to new_user_session_path do %>
+                    <p class="text-center m-5 pt-5">Veuillez vous logger pour réserver</p>
+                <% end %>
+            <% else %>
+            <p class="text-center mt-2"><%= @plush.price_per_day %> <i class="fas fa-euro-sign"></i> par jour </p>
+            <div class="m-3">
+                <%= simple_form_for [@plush, @booking] do |t| %>
+                <%= t.input :start_date %>
+                <%= t.input :end_date %>
+                <%= t.submit class:"btn btn-primary offset-md-3" %>
+                <% end %>
             </div>
-        <% end %>
+
+            <% end %>
+        </div>
         
 
     </div>
-
+    <hr>
     <%= link_to plushes_path  do %>
     <h3>Back <i class="fas fa-undo-alt ml-1"></i></h3>
   <% end %>
