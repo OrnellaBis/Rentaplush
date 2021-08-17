@@ -7,7 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 require 'faker'
-
+Plush.destroy_all
+Booking.destroy_all
 puts 'Creating 100 fake plushes...'
 
 100.times do
@@ -22,4 +23,17 @@ puts 'Creating 100 fake plushes...'
   )
   plush.save!
 end
-puts 'Finished!'
+puts 'Finished plushes!'
+
+puts 'Creating 100 fake bookings...'
+
+50.times do
+  booking = Booking.new(
+    start_date: Faker::Date.forward(days: 23),
+    end_date: Faker::Date.forward(days: 70),
+    plush_id: rand(1..100),
+    user_id: 1
+  )
+  booking.save!
+end
+puts 'Finished booking!'
