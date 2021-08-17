@@ -1,0 +1,35 @@
+<div class="container">
+  <h1>Toutes les peluches</h1>
+  <p>correspondant à vos critères</p>
+  <div class="card-grid">
+    <% @plushes.each do |plush| %>
+      <%= link_to plush_path(plush) do %>
+        <div class="cards mt-4">
+          <div class="card-category"  style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://www.ma-peluche.fr/wp-content/uploads/2020/11/11771-zczy0d.jpg')">
+            <div class="plush_name">
+              <%= plush.name %>
+            </div>
+            <div class="plush_size">
+              <%= plush.size %>cm
+            </div>
+          </div>
+          <div class="card-info">
+            <div class="cat-loc">
+              <h3>
+                <%= plush.category.capitalize %>
+              </h3>
+              <p>
+                <%= plush.localisation %>
+              </p>
+            </div>
+            <div class="price">
+              <h3>
+                <%= plush.price_per_day %>€/jour
+              </h3>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
