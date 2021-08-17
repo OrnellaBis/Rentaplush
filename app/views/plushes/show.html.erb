@@ -1,0 +1,23 @@
+<div class="container">
+    <h2><%= @plush.name %></h2>
+    <h3><%= @plush.category %></h3>
+    <p><%= @plush.price_per_day %></p>
+    <p><%= @plush.description %></p>
+    <p><%= @plush.localisation %></p>
+    <p><%= @plush.size %></p>
+
+    <hr>
+
+    <hr>
+
+    <hr>
+
+    <hr>
+
+
+    <%= simple_form_for [@plush, @booking] do |t| %>
+    <%= t.input :start_date %>
+    <%= t.input :end_date %>
+    <%= t.submit class:"btn btn-primary" %>
+    <% end %>
+</div>
