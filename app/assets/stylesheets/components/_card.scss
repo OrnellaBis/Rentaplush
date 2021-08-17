@@ -1,0 +1,23 @@
+.container-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 2em;
+  .plush-card {
+    display: inline-block;
+    width: 350px;
+    height: 350px;
+
+    .plush-group{
+      img {
+        border-radius: 15px;
+        width: 100%;
+      }
+      p {
+        padding: 10px;
+      }
+    }
+  }
+
+}
+

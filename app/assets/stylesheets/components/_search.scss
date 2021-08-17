@@ -1,36 +1,40 @@
-.display-inline-flex {
-  display: inline-flex;
-  padding: 0.5em;
-  border: 1px solid lightgray;
-  border-radius: 50px 50px 50px 50px;
+.container-search {
+  text-align: center;
+  .display-inline-flex {
+    display: inline-flex;
+    padding: 0.5em;
+    border: 1px solid lightgray;
+    border-radius: 50px 50px 50px 50px;
 
-  input[type="text"] {
-    font-size: 20px;
-    border: 0;
-    outline: none;
-    width: 300px;
-    background-color: #f4f4f4;
+    input[type="text"] {
+      font-size: 20px;
+      border: 0;
+      outline: none;
+      width: 300px;
+      background-color: #f4f4f4;
+    }
+
+    button {
+      align-items: center;
+      border-radius: 50%;
+      background-color: #ff385c;
+      border: 0;
+      width: 4em;
+      height: 4em;
+    }
+
+    button:before {
+      display: inline-block;
+      content: "";
+      background-image: url("/assets/loupe.svg");
+      background-size: cover;
+      width: 24px;
+      height: 24px;
+    }
+
   }
-
-  button {
-    align-items: center;
-    border-radius: 50%;
-    background-color: #ff385c;
-    border: 0;
-    width: 4em;
-    height: 4em;
-  }
-
-  button:before {
-    display: inline-block;
-    content: "";
-    background-image: url("/assets/loupe.svg");
-    background-size: cover;
-    width: 24px;
-    height: 24px;
-  }
-
 }
+
 
 .margin-left-20 {
   margin-left: 20px;
