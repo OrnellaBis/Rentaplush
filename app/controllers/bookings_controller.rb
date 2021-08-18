@@ -1,12 +1,10 @@
 class BookingsController < ApplicationController
     def index
-        @bookings = Booking.all
+      @bookings = Booking.all
     end
 
     def show
     end
-
-
 
     def create
         @user = current_user
@@ -15,16 +13,16 @@ class BookingsController < ApplicationController
         @booking.user = @user
         @booking.plush = @plush
         if @booking.save
-            redirect_to bookings_path
+          redirect_to bookings_path
         else
-            render "/plush/#{@plush}"
+          render "/plush/#{@plush}"
         end
     end
 
     def destroy
-        @booking = Booking.find(params[:id])
-        @booking.destroy
-        redirect_to bookings_path
+      @booking = Booking.find(params[:id])
+      @booking.destroy
+      redirect_to bookings_path
     end
 
     private
