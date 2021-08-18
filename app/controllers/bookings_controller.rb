@@ -24,10 +24,10 @@ class BookingsController < ApplicationController
       @booking.destroy
       redirect_to bookings_path
     end
-  
+
     private
 
-   def booking_params
-    params.require(:booking).permit(:start_date, :end_date, :plush_id)
-   end
+    def booking_params
+        params.require(:booking).permit(:start_date, :end_date, :plush_id)
+    end
 end
