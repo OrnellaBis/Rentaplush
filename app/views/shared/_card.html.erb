@@ -1,35 +1,33 @@
-<div  class="p-2 px-5"><h3>Nos peluches les plus populaires</h3></div>
-<div class="cards p-3 px-5">
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(assets/llama.jpeg)">
-  </div>
+<div class='home'>
+  <h3 class="p-2 px-5">Nos peluches les plus populaires</h3>
+    <div class="home-cards p-3 px-5">
 
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(assets/avocado.jpeg)">
 
-  </div>
+      <% @plushes.each do |plush|   %>
+        <%= link_to plush_path(plush) do %>
+        <div class="home-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_path "plushes/#{plush.name}.png" %>')">
+        </div>
+        <% end %>
+      <% end %>
+    </div>
 
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(assets/octopus.jpeg)">
+      <h3 class="p-2 px-5">Nos catégories les plus populaires</h3>
 
-  </div>
+        <div class="home-cards p-3 px-5">
+          <div class="home-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(assets/Kawaii.jpeg)">
+            <h4>Kawaii</h4>
+          </div>
 
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(assets/dinosaur.jpeg)">
+          <div class="home-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(assets/marvel.jpeg)">
+            <h4>Films</h4>
+          </div>
 
-  </div>
-</div>
+          <div class="home-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(assets/Panda.jpeg)">
+            <h4>Animaux</h4>
+          </div>
 
-<div  class="p-2 px-5"><h3>Nos catégories les plus populaires</h3></div>
-<div class="cards p-3 px-5">
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(assets/llama.jpeg)">
-  </div>
-
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(assets/avocado.jpeg)">
-
-  </div>
-
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(assets/octopus.jpeg)">
-
-  </div>
-
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(assets/dinosaur.jpeg)">
-
-  </div>
+          <div class="home-card"  style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(assets/emoji.jpeg)">
+            <h4>Emoji</h4>
+          </div>
+        </div>
 </div>
