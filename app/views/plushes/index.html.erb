@@ -1,10 +1,7 @@
 <div class="container">
   <h1>Toutes les peluches</h1>
   <p>correspondant à vos critères</p>
-  
-  <%= link_to root_path  do %>
-    <h6><i class="fas fa-home"></i></i></h6>
-  <% end %>
+
   <div class="card-grid">
     <% @plushes.each do |plush| %>
       <%= link_to plush_path(plush) do %>
