@@ -1,7 +1,7 @@
 
 <div class="container">
-    <h1><%= @plush.name %> - <%= @plush.size %> cm</h1>
-    <div 
+    <h1 class="py-3"><%= @plush.name %> - <%= @plush.size %> cm</h1>
+    <div
         class="home-card show-banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_path "plushes/#{@plush.name.downcase}.png" %>')">
     </div>
 
@@ -14,8 +14,8 @@
             <p><i class="fas fa-map-marked-alt mr-1"> </i><%= @plush.localisation %></p>
 
         </div>
-        
-            
+
+
         <div id="form-card">
             <% if !user_signed_in? %>
                 <%= link_to new_user_session_path do %>
@@ -33,7 +33,7 @@
 
             <% end %>
         </div>
-        
+
 
     </div>
     <hr>
