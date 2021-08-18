@@ -1,4 +1,3 @@
-
 User.create(first_name: "lambda", last_name: "lamdab", email: "test@gmail.com", password: "coucou")
 plushers = [
   Plush.new(name: "Baby Yoda", category: "Films", localisation: "Paris 15ème", size: rand(1..10), price_per_day: rand(15..100), user_id: 1, description: "Cette peluche est une adorable créature pour vivre des aventures intergalactiques et pleines de calins."),

@@ -1,23 +1,30 @@
+
 <div class="container">
-    <h2><%= @plush.name %></h2>
-    <h3><%= @plush.category %></h3>
-    <p><%= @plush.price_per_day %></p>
-    <p><%= @plush.description %></p>
-    <p><%= @plush.localisation %></p>
-    <p><%= @plush.size %></p>
+    <h1><%= @plush.name %> - <%= @plush.size %> cm</h1>
+    
+    <div class="d-flex justify-content-between mt-5">
+        <div>
+            <h2><%= @plush.category.capitalize %></h2>
+            <h2> Description</h2>
+            <p><i class="fas fa-comment-dots mr-1"> </i><%= @plush.description %></p>
+            <h2>Localisation</h2>
+            <p><i class="fas fa-map-marked-alt mr-1"> </i><%= @plush.localisation %></p>
+            
+        </div>
+        <div id="form-card">
+            <p class="text-center mt-2"><%= @plush.price_per_day %> <i class="fas fa-euro-sign"></i> par jour </p>
+            <div class="m-2">
+                <%= simple_form_for [@plush, @booking] do |t| %>
+                <%= t.input :start_date %>
+                <%= t.input :end_date %>
+                <%= t.submit class:"btn btn-primary offset-md-3" %>
+            </div>
+            
+        </div>
+        <% end %>
+    </div>
 
-    <hr>
-
-    <hr>
-
-    <hr>
-
-    <hr>
-
-
-    <%= simple_form_for [@plush, @booking] do |t| %>
-    <%= t.input :start_date %>
-    <%= t.input :end_date %>
-    <%= t.submit class:"btn btn-primary" %>
-    <% end %>
+    <%= link_to plushes_path  do %>
+    <h3>Back <i class="fas fa-undo-alt ml-1"></i></h3>
+  <% end %>
 </div>
