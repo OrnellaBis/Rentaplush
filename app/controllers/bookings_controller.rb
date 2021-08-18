@@ -1,16 +1,12 @@
 class BookingsController < ApplicationController
     def index
-        @bookings = Booking.all
+      @bookings = Booking.all
     end
 
     def show
     end
 
-
-
     def create
-<<<<<<< HEAD
-=======
         @user = current_user
         @plush = Plush.find(params[:plush_id])
         @booking = Booking.new(booking_params)
@@ -21,22 +17,17 @@ class BookingsController < ApplicationController
         else
             render "/plush/#{@plush}"
         end
->>>>>>> master
     end
 
     def destroy
-        @booking = Booking.find(params[:id])
-        @booking.destroy
-        redirect_to bookings_path
+    @booking = Booking.find(params[:id])
+    @booking.destroy
+    redirect_to bookings_path
     end
-<<<<<<< HEAD
 
-=======
-    
     private
 
     def booking_params
-        params.require(:booking).permit(:start_date, :end_date, :plush_id)
+    params.require(:booking).permit(:start_date, :end_date, :plush_id)
     end
->>>>>>> master
 end
