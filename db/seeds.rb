@@ -1,3 +1,5 @@
+Plush.destroy_all
+User.destroy_all
 
 User.create(first_name: "lambda", last_name: "lamdab", email: "test@gmail.com", password: "coucou")
 plushers = [
