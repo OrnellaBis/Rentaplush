@@ -1,16 +1,15 @@
 <div class="container">
-  <h1>Toutes les peluches</h1>
-  <p>correspondant à vos critères</p>
+  <h1>Toutes les peluches disponibles</h1>
   <div class="card-grid">
     <% @plushes.each do |plush| %>
       <%= link_to plush_path(plush) do %>
         <div class="cards mt-4">
-          <div class="card-category"  style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://www.ma-peluche.fr/wp-content/uploads/2020/11/11771-zczy0d.jpg')">
+          <div class="card-category"  style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_path "plushes/#{plush.name}.png" %>')">
             <div class="plush_name">
               <%= plush.name %>
             </div>
             <div class="plush_size">
-              <%= plush.size %>cm
+              <%= plush.size %> cm
             </div>
           </div>
           <div class="card-info">
@@ -32,4 +31,9 @@
       <% end %>
     <% end %>
   </div>
+
+  <%= link_to root_path  do %>
+    <h3>Back <i class="fas fa-undo-alt ml-1"></i></h3>
+  <% end %>
+
 </div>
