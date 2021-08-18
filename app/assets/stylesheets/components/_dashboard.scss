@@ -1,0 +1,39 @@
+h1 {
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 25px;
+  padding-left: 30px;
+}
+.card-product {
+  overflow: hidden;
+  width: fit-content;
+  height: 200px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding-right: 4px;
+}
+
+.card-product img {
+  height: 100%;
+  width: 180px;
+  object-fit: cover;
+}
+
+
+.card-product .card-product-infos {
+  padding: 16px;
+}
+
+ul {
+list-style-type: none;
+}
+
+.card-pro {
+  width: 500px;
+}
