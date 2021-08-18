@@ -7,6 +7,7 @@
 
 .home h3 {
   font-size: 30px;
+  margin-top: 10px;
 }
 
 .home a:hover {
@@ -21,10 +22,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  color: white;
+  font-size: 25px;
+  text-shadow: 2px;
   h4 {
     color: white;
     text-decoration: none;
   }
+}
+
+#form-card{
+  border-radius: 15px;
+  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, .2);
 }
 
 .booking-img{
