@@ -5,12 +5,32 @@
   height: 500px;
 }
 
+.btn-all {
+    position: absolute;
+    padding: 10px;
+    border-radius: 10px;
+    opacity: 0.5;
+    top: 350px;
+    left: 680px;
+}
+
+.btn-link-all {
+  text-decoration: none;
+  color: black;
+  &:hover {
+    color:darkgray;
+    text-decoration: none;
+  }
+}
+
+
 .banner h1 {
   margin: 0;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 32px;
   font-weight: bold;
+  margin-bottom: 20px;
 }
 
 .banner p {
@@ -20,7 +40,7 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
-.search-form-control {
+#banner-search {
   position: relative;
 }
 
