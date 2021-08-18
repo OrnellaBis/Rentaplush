@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+User.create(first_name: "lambda", last_name: "lamdab", email: "test@gmail.com", password: "coucou")
 
   plush = Plush.new(name: "Bébé Yoda", category: "Films", description: "Cette peluche est une adorable créature pour vivre des aventures intergalactiques et pleines de calins.", localisation: "Paris 15ème", size: rand(1..10), price_per_day: rand(15..100), user_id: 1)
   plush_1 = Plush.new(name: "Edward", category: "Animaux", description: "Un bébé renard tout mignon et tout soyeux", localisation: "Bordeaux", size: rand(1..10), price_per_day: rand(15..100), user_id: 1)
