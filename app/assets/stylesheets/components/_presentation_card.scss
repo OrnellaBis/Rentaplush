@@ -1,0 +1,21 @@
+.presentation-card {
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.1);
+  text-align: center;
+  font-family: "Work Sans", "Helvetica", "sans-serif";
+  line-height: 1.5;
+}
+
+.presentation-card h2 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.presentation-card p {
+  font-size: 18px;
+}
+
+.presentation-card h3 {
+  font-size: 16px
+}
