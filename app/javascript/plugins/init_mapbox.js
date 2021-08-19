@@ -39,7 +39,7 @@ const addMarkersToMap = (map, markers) => {
         const element = document.createElement('div');
         element.className = 'marker';
         element.style.backgroundImage = `url('${marker.image_url}')`;
-        element.style.backgroundSize = 'contain';
+        element.style.backgroundSize = 'cover';
         element.style.width = '50px';
         element.style.height = '50px';
 
