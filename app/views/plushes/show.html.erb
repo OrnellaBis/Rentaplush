@@ -22,18 +22,17 @@
             <p class="text-center m-5 pt-5">Veuillez vous logger pour réserver</p>
           <% end %>
         <% else %>
-          <p class="text-center mt-2"><%= @plush.price_per_day %> <i class="fas fa-euro-sign"></i> par jour </p>
           <div class="m-3">
             <%= simple_form_for [@plush, @booking] do |t| %>
-              <%= t.input :start_date, id: "range_start" %>
-              <%= t.input :end_date, id: "range_end" %>
-              <%= t.submit class:"btn btn-primary offset-md-3" %>
-              <p>Réservation pour <span id="total-nights">0</span> nuits</p>
+              <%= t.input :start_date, as: :string, required: false, input_html: {class: "datepicker"}%>
+              <%= t.input :end_date, as: :string, required: false, input_html: {class: "datepicker"}%>
+              <p>Réservation pour <span id="total-nights">0</span> jours</p>
               <p>
                 <i class="fas fa-euro-sign"></i>
-                <span id="flat-price-per-night"><%= @plush.price_per_day %></span> €/jour
+                <span id="plush-price-per-night"><%= @plush.price_per_day %></span> €/jour
               </p>
               <p>Prix total : <span id="total-price">0</span> € </p>
+              <%= t.submit class:"btn btn-primary offset-md-3"%>
             <% end %>
           </div>
         <% end %>
