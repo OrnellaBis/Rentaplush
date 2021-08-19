@@ -16,8 +16,10 @@
     <%= render 'shared/flashes' %>
     <p class="alert"><%= alert %></p>
     <div class="content-wrapper">
-      <%= yield %>
-      <%= render 'shared/footer' %>
+    <%= yield %>
     </div>
+  <% unless params[:controller] == "plushes" && params[:action] == "show" %>
+    <%= render 'shared/footer' %>
+  <% end %>
   </body>
 </html>
