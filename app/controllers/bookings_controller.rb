@@ -7,16 +7,16 @@ class BookingsController < ApplicationController
     end
 
     def create
-        @user = current_user
-        @plush = Plush.find(params[:plush_id])
-        @booking = Booking.new(booking_params)
-        @booking.user = @user
-        @booking.plush = @plush
-        if @booking.save
-          redirect_to bookings_path
-        else
-          redirect_to plush_path(@plush)
-        end
+      @user = current_user
+      @plush = Plush.find(params[:plush_id])
+      @booking = Booking.new(booking_params)
+      @booking.user = @user
+      @booking.plush = @plush
+      if @booking.save
+        redirect_to bookings_path
+      else
+        redirect_to plush_path(@plush)
+      end
     end
 
     def destroy

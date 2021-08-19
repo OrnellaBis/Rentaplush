@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
-  resources :plushes, only:[:index, :show] do
+  resources :plushes, only:[:index, :show, :new, :create] do
     resources :bookings, only:[:create]
   end
 

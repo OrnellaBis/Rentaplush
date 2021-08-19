@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="m-3">
+        <%= simple_form_for @plush do |t| %>
+        <%= t.input :name %>
+        <%= t.input :category %>
+        <%= t.input :price_per_day %>
+        <%= t.input :description %>
+        <%= t.input :localisation %>
+        <%= t.input :size %>
+        <%= t.input :photo, as: :file %>
+        <%= t.submit class:"btn btn-primary" %>
+        <% end %>
+    </div>
+</div>
