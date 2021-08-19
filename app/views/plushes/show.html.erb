@@ -25,9 +25,9 @@
           <p class="text-center mt-2"><%= @plush.price_per_day %> <i class="fas fa-euro-sign"></i> par jour </p>
           <div class="m-3">
             <%= simple_form_for [@plush, @booking] do |t| %>
-              <%= t.input :start_date %>
-              <%= t.input :end_date %>
-              <%= t.submit class:"btn btn-primary offset-md-3" %>
+              <%= t.input :start_date, as: :string, required: false, input_html: {class: "datepicker"}%>
+              <%= t.input :end_date, as: :string, required: false, input_html: {class: "datepicker"}%>
+              <%= t.submit class:"btn btn-primary offset-md-3"%>
             <% end %>
           </div>
         <% end %>
