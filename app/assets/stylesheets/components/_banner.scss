@@ -6,31 +6,25 @@
 }
 
 .btn-all {
-    position: absolute;
-    padding: 10px;
-    border-radius: 10px;
-    opacity: 0.5;
-    top: 350px;
-    left: 680px;
-}
-
-.btn-link-all {
-  text-decoration: none;
+  padding: 12px;
+  border: 1px solid grey;
+  border-radius: 25px;
+  background-color: rgba(200,200,200, 0.3);
   color: black;
+  text-decoration: none;
   &:hover {
-    color:darkgray;
-    text-decoration: none;
+    color:grey;
   }
 }
 
 
+
 .banner h1 {
-  margin: 0;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 32px;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin: 0 0 20px;
 }
 
 .banner p {
@@ -66,7 +60,9 @@
 }
 
 .show-banner{
-  height: 600px;
+  height: 300px;
+  width: 300px;
   background-size: cover;
   background-position: center;
+  border-radius: 5px;
 }

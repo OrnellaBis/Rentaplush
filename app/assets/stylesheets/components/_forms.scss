@@ -1,0 +1,57 @@
+/* == sign in SCSS
+*  == container center in the page
+*/
+.form-container-signin {
+  max-width: 700px;
+  margin: 0 auto;
+
+  fieldset{
+    margin: 6px 0;
+  }
+
+
+}
+
+.form-container-signup {
+  max-width: 700px;
+  margin: 0 auto;
+
+  .form-group:last-child {
+    margin-bottom: 0.5rem;
+  }
+
+}
+
+input.btn {
+  padding: 0;
+}
+
+.form-container-signin h2, .form-container-signup h2{
+  text-align: center;
+  padding: 10px 0;
+  margin: 0;
+}
+.form-container-signin .border-form, .form-container-signup .border-form{
+  border: 1px solid lightgray;
+  border-radius: 25px;
+  padding: 15px;
+}
+
+.form-container-signin a, .form-container-signup a {
+  text-decoration: none;
+  color: black;
+}
+
+input.btn:hover, a:hover {
+  color: #167FFB;
+}
+
+
+@media only screen and (max-width: 751px) {
+  div#signup, div#signin {
+    border: 0 !important;
+  }
+  div.footer {
+    display: none;
+  }
+}
