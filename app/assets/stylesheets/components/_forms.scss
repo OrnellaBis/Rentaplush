@@ -45,3 +45,13 @@ input.btn {
 input.btn:hover, a:hover {
   color: #167FFB;
 }
+
+
+@media only screen and (max-width: 751px) {
+  div#signup, div#signin {
+    border: 0 !important;
+  }
+  div.footer {
+    display: none;
+  }
+}
