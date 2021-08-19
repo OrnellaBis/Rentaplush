@@ -15,8 +15,9 @@
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  margin-bottom: 20px;
-  padding-right: 4px;
+  border-radius: 6px;
+  margin: 30px;
+  opacity: 0.9;
 }
 
 .card-product img {
@@ -36,4 +37,17 @@ list-style-type: none;
 
 .card-pro {
   width: 500px;
+}
+
+.card-allbooking {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: contain;
+  width: initial;
+  min-height: 800px ;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-around;
+  align-content: stretch;
 }
