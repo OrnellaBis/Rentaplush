@@ -6,31 +6,33 @@
     <div class="card-grid">
       <% @plushes.each do |plush| %>
         <%= link_to plush_path(plush) do %>
-          <div class="cards">
-            <div class="card-category"  style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('<%= cl_image_path plush.photo.key %>')">
-              <div class="plush_name">
-                <%= plush.name %>
+          <% if plush.photo.attached? %>
+            <div class="cards">
+              <div class="card-category"  style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('<%= cl_image_path plush.photo.key %>')">
+                <div class="plush_name">
+                  <%= plush.name %>
+                </div>
+                <div class="plush_size">
+                  <%= plush.size %> cm
+                </div>
               </div>
-              <div class="plush_size">
-                <%= plush.size %> cm
+              <div class="card-info">
+                <div class="cat-loc">
+                  <h3>
+                    <%= plush.category.capitalize %>
+                  </h3>
+                  <p>
+                    <%= plush.localisation %>
+                  </p>
+                </div>
+                <div class="price">
+                  <h3>
+                    <%= plush.price_per_day %>€/jour
+                  </h3>
+                </div>
               </div>
             </div>
-            <div class="card-info">
-              <div class="cat-loc">
-                <h3>
-                  <%= plush.category.capitalize %>
-                </h3>
-                <p>
-                  <%= plush.localisation %>
-                </p>
-              </div>
-              <div class="price">
-                <h3>
-                  <%= plush.price_per_day %>€/jour
-                </h3>
-              </div>
-            </div>
-          </div>
+          <% end %>
         <% end %>
       <% end %>
     </div>
