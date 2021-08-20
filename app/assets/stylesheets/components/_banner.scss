@@ -6,6 +6,7 @@
 }
 
 
+
 .btn-all {
   display: block;
   padding: 12px;
@@ -20,6 +21,7 @@
     text-decoration: none;
     color:black;
     background-color: rgba(128, 158, 123, 0.8);
+
   }
 }
 
@@ -66,8 +68,7 @@
 }
 
 .show-banner{
-  height: 300px;
-  width: 300px;
+  min-width: 25rem;
   background-size: cover;
   background-position: center;
   border-radius: 5px;
