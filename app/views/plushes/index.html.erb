@@ -7,7 +7,7 @@
       <% @plushes.each do |plush| %>
         <%= link_to plush_path(plush) do %>
           <div class="cards">
-            <div class="card-category"  style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('<%= image_path "plushes/#{plush.name.downcase}.png" %>')">
+            <div class="card-category"  style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('<%= cl_image_path plush.photo.key %>')">
               <div class="plush_name">
                 <%= plush.name %>
               </div>
