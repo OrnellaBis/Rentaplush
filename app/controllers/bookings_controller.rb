@@ -1,22 +1,23 @@
 class BookingsController < ApplicationController
     def index
       @bookings = Booking.all
+      @mounth = ["none", "Janvier", "Février", "Mars", "Arvil", "Mai", "Juin", "Juillet", "Aout", "Septembre", "Octobre", "Novembre", "Décembre"]
     end
 
     def show
     end
 
     def create
-        @user = current_user
-        @plush = Plush.find(params[:plush_id])
-        @booking = Booking.new(booking_params)
-        @booking.user = @user
-        @booking.plush = @plush
-        if @booking.save
-          redirect_to bookings_path
-        else
-          redirect_to plush_path(@plush)
-        end
+      @user = current_user
+      @plush = Plush.find(params[:plush_id])
+      @booking = Booking.new(booking_params)
+      @booking.user = @user
+      @booking.plush = @plush
+      if @booking.save
+        redirect_to bookings_path
+      else
+        redirect_to plush_path(@plush)
+      end
     end
 
     def destroy

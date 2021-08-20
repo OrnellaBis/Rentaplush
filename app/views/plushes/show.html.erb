@@ -1,8 +1,8 @@
-<div class="container">
+<div class="container" id="flatpickrpage">
   <h1 class="text-center py-3"><%= @plush.name %> - <%= @plush.size %> cm</h1>
   <div class="d-flex justify-content-around align-items-stretch" id="container-show">
       <div class="presentation-card">
-        <div class="show-banner" style="background-image: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url('<%= image_path "plushes/#{@plush.name.downcase}.png" %>')">
+        <div class="show-banner" style="background-image: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url('<%= cl_image_path @plush.photo.key %>')">
         </div>
         <div class="d-flex justify-content-between mt-5" id="desciption-card">
           <div class="pr-3">
@@ -37,8 +37,9 @@
               <p><strong>Prix total de votre location: <span id="total-price">0</span>€ </strong></p>
               <%= t.submit "Confirmer ma réservation", class:"btn btn-primary align-right"%>
             <% end %>
-          </div>
-        <% end %>
+            
+            <% end %>
+            
       </div>
   </div>
 </div>
