@@ -6,6 +6,7 @@ const initFlatpickr = () => {
 
 export { initFlatpickr };
 
+
 const startDate = document.getElementById("booking_start_date");
 const endDate = document.getElementById("booking_end_date");
 const totalNights = document.getElementById("total-nights");
