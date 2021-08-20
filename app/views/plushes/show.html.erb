@@ -32,14 +32,14 @@
               <%= t.input :end_date, as: :string, required: false, label: "Date de fin", input_html: {class: "datepicker"}%>
               <p>Durée de la location: <span id="total-nights">0</span> jours</p>
               <p>Prix par jour:
-                <span id="plush-price-per-night"><%= pluralize @plush.price_per_day %></span> €/jour
+                <span id="plush-price-per-night"><%= @plush.price_per_day %></span> €/jour
               </p>
               <p><strong>Prix total de votre location: <span id="total-price">0</span>€ </strong></p>
               <%= t.submit "Confirmer ma réservation", class:"btn btn-primary align-right"%>
             <% end %>
-            
+
             <% end %>
-            
+
       </div>
   </div>
 </div>
