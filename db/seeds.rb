@@ -5,23 +5,23 @@ User.destroy_all
 user = User.create(first_name: "lambda", last_name: "lamdab", email: "test@gmail.com", password: "coucou")
 files = [
 
-  file_0 = URI.open('https://giantbomb1.cbsistatic.com/uploads/original/9/99864/2419866-nes_console_set.png'),
-  file_1 = URI.open('https://www.unecuillerepourdoudou.com/blog/wp/wp-content/uploads/2018/12/Ambiance-ours-marron.jpg'),
-  file_2 = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwfRAkAdr6V_fm2mXzWudbPeNDpBRn4m6tuw&usqp=CAU'),
-  file_3 = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvj-gCkFgUvmDcJuahwtOcTOGeeVXu9FZp9w&usqp=CAU'),
-  file_4 = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLvwOjuz3zwVObmVv4HOMv28JPtvVwd8wW1Q&usqp=CAU'),
-  file_5 = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEvj7TwEbbQuYUeu2cPD9lwKZQX5f62z47bQ&usqp=CAU'),
-  file_6 = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4KMczOpzRgUI6fByMtPu3TY4d9m3lR0lIgw&usqp=CAU'),
-  file_7 = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2IFWEtoOK2YnrnA3s492HUWEbfuryPypy7A&usqp=CAU'),
-  file_8 = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRr39a-cQVXKWMhK-L0Zx0cMU42y_koaWuhHQ&usqp=CAU'),
-  file_9 = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwxteh2oOjI72e5L4gPKtLDUll4PtNTp44WA&usqp=CAU'),
-  file_10 = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSg5uAGHsMvGxSGl1MrZjFcciN4R1OcqqXRAw&usqp=CAU'),
-  file_11 = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWVYGoBt75mXxntJQmC9sk2VwO-Q4fuaInzA&usqp=CAU'),
-  file_12 = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ5rcK9tYM02uDJ_WC2NddADrFWNiMAifdVA&usqp=CAU'),
-  file_13 = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDBPlh_dtk7cJbhiWADLN9InnWU7EKh5MD3w&usqp=CAU'),
-  file_14 = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYEaGt_JZgwpI9Sl63YVBTJwbVrNeVtPEOGg&usqp=CAU'),
-  file_15= URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSng8R1NNSpjJiENAmfFRXU7OxH2Copqzt4Tg&usqp=CAU'),
-  file_16= URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJCm4GHkS0rCn1y0Y-3Sf7ri_OzeJgfh8uOQ&usqp=CAU')
+  file_0 = URI.open('https://cdn-ssl.s7.disneystore.com/is/image/DisneyShopping/1231047442892'),
+  file_1 = URI.open('https://s7d2.scene7.com/is/image/BedBathandBeyond/289802667369188p?$460$&wid=515&hei=515'),
+  file_2 = URI.open('https://sc01.alicdn.com/kf/UTB86fe0aL2JXKJkSanrq6y3lVXaO.jpg'),
+  file_3 = URI.open('https://img.joomcdn.net/5fddeb0585f585df2573039d448a3e37f360d2fa_original.jpeg'),
+  file_4 = URI.open('https://images.unsplash.com/photo-1565945887714-d5139f4eb0ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80'),
+  file_5 = URI.open('https://cdn.shopify.com/s/files/1/0584/3841/products/plush-freddy-krueger-nightmare-on-elm-street-phunny-horror-plush-1_2000x2000.jpg?v=1602083911'),
+  file_6 = URI.open('https://images-na.ssl-images-amazon.com/images/I/71nTdhf9HTL._AC_SL1500_.jpg'),
+  file_7 = URI.open('https://cdn-ssl.s7.disneystore.com/is/image/DisneyShopping/1232047442758'),
+  file_8 = URI.open('https://i5.walmartimages.com/asr/5c89353d-fa61-4c03-b7d2-0ef31cacb529_1.97d58323e7a9d5173b92abdd5ad13ba6.jpeg?odnWidth=1000&odnHeight=1000&odnBg=ffffff'),
+  file_9 = URI.open('https://m.media-amazon.com/images/I/41OO0getO8L.jpg'),
+  file_10 = URI.open('https://cdn.shopify.com/s/files/1/0484/9559/1580/products/product-image-1420156844_960x.jpg?v=1615738396'),
+  file_11 = URI.open('https://cdn.shopify.com/s/files/1/0584/3841/products/plush-it-pennywise-the-dancing-clown-hugme-vibrating-plush-by-kidrobot-2_1000x1000.jpg?v=1579553827'),
+  file_12 = URI.open('https://images.dunelm.com/30677948.jpg?$standardplayerdefault$&img404=noimagedefault'),
+  file_13 = URI.open('https://images.unsplash.com/photo-1554825203-68321ddde262?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=977&q=80'),
+  file_14 = URI.open('https://cdn.alzashop.com/ImgW.ashx?fd=f16&cd=ZA305g'),
+  file_15= URI.open('https://cdn.shopify.com/s/files/1/0584/3841/products/none-friday-the-13th-jason-phunny-plush-1_1000x1000.jpg?v=1579552165'),
+  file_16= URI.open('https://www.derivefigurine.com/51339-large_default/michael-myers-plush-phunny.jpg')
 ]
 
 
@@ -31,7 +31,7 @@ Plush.new(name: "Baby Yoda", category: "Films", localisation: "1 rue Oberkampf, 
   Plush.new(name: "Fox", category: "Animaux", localisation: "2 rue Oberkampf, Paris", size: rand(15..50), price_per_day: rand(3..15
     ), user: user, description: "Un bébé renard tout mignon et tout soyeux"),
   Plush.new(name: "Belby Toucan", category: "Animaux", localisation: "3 rue Oberkampf, Paris", size: rand(15..50), price_per_day: rand(3..15
-    ), user: user, description: "Un bébé renard tout mignon et tout soyeux"),
+    ), user: user, description: "Un toucan qui ne fait pas de boucan."),
   Plush.new(name: "Kim", category: "Kawaï", localisation: "4 rue Oberkampf, Paris", size: rand(15..50), price_per_day: rand(3..15
     ), user: user, description: "Kim Kardawaï."),
   Plush.new(name: "Smili", category: "Emoji", localisation: "5 rue Oberkampf, Paris", size: rand(15..50), price_per_day: rand(3..15
@@ -58,7 +58,7 @@ Plush.new(name: "Baby Yoda", category: "Films", localisation: "1 rue Oberkampf, 
     ), user: user, description: "Il n'est plus à présenter, dépéchez-vous de l'attraper!"),
   Plush.new(name: "Jason", category: "Monstre", localisation: "16 rue Oberkampf, Paris", size: rand(15..50), price_per_day: rand(3..15
     ), user: user, description: "Prenez-garde on ne le remarque pas..."),
-  Plush.new(name: "Mickael mayers", category: "Monstre", localisation: "17 rue Oberkampf, Paris", size: rand(15..50), price_per_day: rand(3..15
+  Plush.new(name: "Michael Myers", category: "Monstre", localisation: "17 rue Oberkampf, Paris", size: rand(15..50), price_per_day: rand(3..15
     ), user: user, description: "Idéal pour Halloween ou pour tous les jours si vous aimez la proximité d'un tueur en série."),
 ]
 
