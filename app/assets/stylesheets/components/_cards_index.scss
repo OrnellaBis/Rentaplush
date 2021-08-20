@@ -1,7 +1,8 @@
 .card-grid {
+  flex-grow: 1;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr ;
+  grid-gap: 20px;
   a {
     text-decoration: none;
   }
@@ -10,7 +11,8 @@
 .card-category {
   background-size: cover;
   background-position: center;
-  height: 180px;
+  /*height: 180px;*/
+  height: 200px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -59,6 +61,13 @@ font-weight: bold;
   margin: 4px;
 }
 
+#map {
+  flex-basis: 400px;
+  margin-left: 2em;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+}
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
   .cards {

@@ -8,20 +8,34 @@
         <div class="card-product">
           <div class="home-card booking-img" style="background-image: linear-gradient(rgba(0,0,0,0.14), rgba(0,0,0,0.14)), url('<%= image_path "plushes/#{booking.plush.name.downcase}.png" %>')"></div>
           <div class="card-product-infos">
-            <ul>
-                <li> <strong><%= booking.plush.name %> </strong> </li>
-                <li> Vous avez reservé du <%= booking.start_date %> au <%= booking.end_date %></li>
-                <li> <%= booking.plush.localisation %></li>
-                <li class="pb-3"> <%= booking.plush.price_per_day %> €/jour</li>
-                <li >
-                  <%= link_to booking_path(booking), method: :delete, data:{confirm: "Souhaitez-vous annuler votre booking ?"} do %>
-                    <p>Supprimer <i class="fas fa-trash-alt pl-1"></i></p>
-                  <% end %>
-                </li>
+
+          <% mounth = %w(none, Janvier, Février, Mars, Arvil, Mai, Juin, Juillet, Aout, Septembre, Octobre, Novembre, Décembre) %>
+              <ul>
+                  <li> <strong><%= booking.plush.name %> </strong> </li>
+                  <li> Vous avez reservé du <strong><%= booking.start_date.day %> <%= mounth[booking.start_date.month]  %> <%= booking.start_date.year %>  au <%= booking.end_date.day %> <%= mounth[booking.end_date.month] %> <%= booking.start_date.year %></strong></li>
+                  <li class="pb-3"> <%= booking.plush.localisation %></li>
+                  <li> <%= link_to booking_path(booking), method: :delete, data:{confirm: "Souhaitez-vous annuler votre booking ?"} do %>
+                      <p>Supprimer <i class="fas fa-trash-alt pl-1"></i></p>
+                    <% end %></li>
+            </ul>
+          </div>
+          <div class="card-product-infos mt-3">
+            <% total_date = (booking.end_date.day - booking.start_date.day) %>
+              <ul>
+                  <li> <strong>Facture</strong> </li>
+                  <li> Prix journalier : <%= booking.plush.price_per_day %> €</li>
+                  <li> Nombre de jours : <%= total_date %></li>
+                  <hr>
+                  <li> Pix Total <strong><%= prix = total_date * booking.plush.price_per_day  %> €</strong></li>
+
             </ul>
           </div>
         </div>
       <% end %>
+
+    <hr>
+    <%= link_to "Continuer mes recherches", plushes_path  %>
     </div>
   </div>
+
 </div>
