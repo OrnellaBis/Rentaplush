@@ -10,9 +10,13 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <div class="search">
-      <form class="form-inline">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button  type="submit"><i class="fas fa-search"></i></button>
+    <%= form_tag plushes_path, method: :get, class: "form-inline" do %>
+          <%= text_field_tag :query,
+            params[:query],
+            class: "form-control mr-sm-2",
+            placeholder: "Chercher une peluche"%>
+
+          <% end %>
       </form>
     </div>
 
