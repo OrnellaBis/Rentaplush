@@ -6,7 +6,7 @@
     <div class="card-booking">
       <% @bookings.each do |booking| %>
         <div class="card-product">
-          <div class="home-card booking-img" style="background-image: linear-gradient(rgba(0,0,0,0.14), rgba(0,0,0,0.14)), url('<%= image_path "plushes/#{booking.plush.name.downcase}.png" %>')"></div>
+          <div class="home-card booking-img" style="background-image: linear-gradient(rgba(0,0,0,0.14), rgba(0,0,0,0.14)), url('<%= cl_image_path booking.plush.photo.key %>')"></div>
           <div class="card-product-infos">
 
               <ul>
@@ -23,7 +23,7 @@
           <div class="card-product-infos mt-3">
             <% total_date = (booking.end_date.day - booking.start_date.day) %>
               <ul>
-                  <li> <strong>Facture</strong> </li>
+                  <li> <strong>Récapitulatif</strong> </li>
                   <li> Prix journalier : <%= booking.plush.price_per_day %> €</li>
                   <li> Nombre de jours : <%= total_date %></li>
                   <hr>
