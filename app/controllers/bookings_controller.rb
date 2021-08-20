@@ -2,6 +2,7 @@ class BookingsController < ApplicationController
     def index
       @bookings = Booking.all
       @mounth = ["none", "Janvier", "Février", "Mars", "Arvil", "Mai", "Juin", "Juillet", "Aout", "Septembre", "Octobre", "Novembre", "Décembre"]
+      @plushes = Plush.all.where(user_id: current_user)
     end
 
     def show
