@@ -1,6 +1,7 @@
 class BookingsController < ApplicationController
     def index
       @bookings = Booking.all
+      @mounth = ["none", "Janvier", "Février", "Mars", "Arvil", "Mai", "Juin", "Juillet", "Aout", "Septembre", "Octobre", "Novembre", "Décembre"]
     end
 
     def show
