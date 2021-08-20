@@ -4,7 +4,7 @@ const initFlatpickr = () => {
   flatpickr(".datepicker", {});
 }
 
-export { initFlatpickr };
+
 
 
 const startDate = document.getElementById("booking_start_date");
@@ -36,3 +36,5 @@ const totalPrice = () => {
        }
     });
   });
+
+  export { initFlatpickr };
