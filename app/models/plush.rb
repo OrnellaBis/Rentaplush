@@ -1,4 +1,6 @@
 class Plush < ApplicationRecord
+
+  CATEGORIES = ["Films", "Animaux", "Kawaï", "Monstre", "Fantastique", "Emoji"]
   belongs_to :user
   has_many :bookings
   geocoded_by :localisation

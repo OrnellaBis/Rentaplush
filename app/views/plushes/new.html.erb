@@ -1,0 +1,28 @@
+
+<div class="container" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://cdn.pixabay.com/photo/2018/02/16/19/25/soft-toys-3158361_1280.jpg')">
+  <h1 class="text-center py-3" id="h1_new">J'ajoute une nouvelle peluche</h1>
+  <h2 class="text-center py-3" id="h2_new">En ajoutant vos peluches et en permettant à tous de les louer, vous devenez fournisseur d'instants magiques pour les petits et les grands !</h2>
+  <div class="d-flex justify-content-around align-items-stretch" id="container-show">
+      <div class="booking-card" id="form-card-new">
+        <% if !user_signed_in? %>
+          <%= link_to new_user_session_path do %>
+            <p class="text-center m-5 pt-5">Veuillez vous connecter pour réserver <%=@plush.name%></p>
+          <% end %>
+        <% else %>
+        <div class="m-3">
+          <%= simple_form_for @plush do |t| %>
+          <%= t.input :name, label: "Nom de votre peluche", placeholder: "Benoit" %>
+          <%= t.input :category, collection: Plush::CATEGORIES, label: "Catégorie" %>
+          <%= t.input :price_per_day, label: "Prix par jour (€)", placeholder: "5€" %>
+          <%= t.input :description, label: "Description", placeholder: "Benoit est un paresseux très attachant mais attention à ne pas le laisser près d'un trottoir." %>
+          <%= t.input :localisation, label: "Localisation de la peluche", placeholder: "16 villa Gaudelet, Paris" %>
+          <%= t.input :size, label: "Taille de la peluche (cm)", placeholder: "49" %>
+          <%= t.input :photo, as: :file, class: "btn btn-light" %>
+          <%= t.submit "Confirmer la création", class:"btn btn-primary" %>
+        <% end %>
+        </div>
+          </div>
+        <% end %>
+      </div>
+  </div>
+</div>

@@ -23,4 +23,19 @@ class PlushesController < ApplicationController
     @plush = Plush.find(params[:id])
     @booking = Booking.new
   end
+
+   def new
+    @plush = Plush.new
+  end
+
+  def create
+    @plush = Plush.new(plush_params)
+    @user = current_user
+    @plush.user = @user
+    if @plush.save
+      redirect_to plush_path(@plush)
+    else
+      render :new
+    end
+  end
 end
