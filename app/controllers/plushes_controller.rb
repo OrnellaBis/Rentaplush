@@ -23,7 +23,6 @@ class PlushesController < ApplicationController
     @plush = Plush.find(params[:id])
     @booking = Booking.new
   end
-<<<<<<< HEAD
 
   def new
     @plush = Plush.new
@@ -46,6 +45,4 @@ class PlushesController < ApplicationController
         params.require(:plush).permit(:name, :category, :price_per_day, :description, :localisation, :size, :photo)
     end
 
-=======
->>>>>>> master
 end

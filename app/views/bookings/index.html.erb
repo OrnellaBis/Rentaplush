@@ -6,7 +6,7 @@
     <div class="card-booking">
       <% @bookings.each do |booking| %>
         <div class="card-product">
-          <div class="home-card booking-img" style="background-image: linear-gradient(rgba(0,0,0,0.14), rgba(0,0,0,0.14)), url('<%= image_path "plushes/#{booking.plush.name.downcase}.png" %>')"></div>
+          <div class="home-card booking-img" style="background-image: linear-gradient(rgba(0,0,0,0.14), rgba(0,0,0,0.14)), url('<%= cl_image_path booking.plush.photo.key %>')"></div>
           <div class="card-product-infos">
 
               <ul>
