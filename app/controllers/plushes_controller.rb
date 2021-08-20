@@ -6,6 +6,7 @@ class PlushesController < ApplicationController
       # @plushes = Plush.where("category ILIKE ?", "%#{params[:query]}%")
     else
     @plushes = Plush.all
+    end
 
 
     @markers = @plushes.geocoded.map do |plush|
