@@ -1,9 +1,33 @@
-<div class="container">
+<div class="container" id="dashboard">
   <h1 class="title-h1">MON DASHBOARD</h1>
-  <h2 class="title-h2">Mes réservations</h2>
+  <div class="d-flex">
+    <h2 class="title-h2 tab-link active" data-tab="booking">Mes réservations</h2>
+    <h2 class="title-h2 tab-link" data-tab="plush">Mes peluches</h2>
+  </div>
+  
 
   <div class="card-allbooking" style= "background-image: url(https://images.unsplash.com/photo-1584993358834-f8deafc4f3c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=668&q=80)">
-    <div class="card-booking">
+    <div class="card-booking tab-content hidden" data-tab="plush">
+      <% @plushes.each do |plush| %>
+        <div class="card-product  booking-center">
+          <div class="home-card booking-img" style="background-image: linear-gradient(rgba(0,0,0,0.14), rgba(0,0,0,0.14)), url('<%= cl_image_path plush.photo.key %>')"></div>
+          <div class="card-product-infos">
+
+              <ul>
+                  <li> <strong><%= plush.name %> </strong> </li>
+                  <li> <%= plush.size %> cm</li>
+                  <li> <%= plush.description %></li>
+                  <li class="pb-3"> <%= plush.localisation %></li>
+            </ul>
+          </div>
+          
+        </div>
+      <% end %>
+          
+      <hr>
+      <%= link_to "Ajouter une nouvelle peluche",  new_plush_path, class: "btn btn-light"  %>
+    </div>
+    <div class="card-booking tab-content" data-tab="booking">
       <% @bookings.each do |booking| %>
         <div class="card-product">
           <div class="home-card booking-img" style="background-image: linear-gradient(rgba(0,0,0,0.14), rgba(0,0,0,0.14)), url('<%= cl_image_path booking.plush.photo.key %>')"></div>
@@ -27,15 +51,15 @@
                   <li> Prix journalier : <%= booking.plush.price_per_day %> €</li>
                   <li> Nombre de jours : <%= total_date %></li>
                   <hr>
-                  <li> Pix Total <strong><%= prix = total_date * booking.plush.price_per_day  %> €</strong></li>
+                  <li> Prix Total <strong><%= prix = total_date * booking.plush.price_per_day  %> €</strong></li>
 
             </ul>
           </div>
         </div>
       <% end %>
 
-    <hr>
-    <%= link_to "Continuer mes recherches", plushes_path  %>
+      <hr>
+      <%= link_to "Continuer mes recherches", plushes_path, class: "btn btn-light"  %>
     </div>
   </div>
 
